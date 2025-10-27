@@ -57,9 +57,11 @@ function aplicarTema(tema) {
 // TODO 3: history.back() y history.forward()
 document.getElementById("bAtras").addEventListener("click", () => {
   // TODO
+  history.back();
 });
 document.getElementById("bAdelante").addEventListener("click", () => {
   // TODO
+  history.forward();
 });
 
 // 4: Cambiar tema mediante el boton
@@ -82,7 +84,11 @@ document.getElementById("bTema").addEventListener("click", () => {
 
 // TODO 5: Abrir ayuda con query ?autor=... (pedir con prompt y usar encodeURIComponent)
 document.getElementById("bAyuda").addEventListener("click", () => {
-  // TODO
+  //Pide nombre de usuario
+  let nombre = prompt("Introduce tu nombre:");
+  //Crear url con query y usando encodeURI para evitar problemas con espacios o caracteres inesperados
+  let url = "ayuda.html?usuario=" + encodeURIComponent(nombre);
+  window.open(url);
 });
 
 // Inicialización

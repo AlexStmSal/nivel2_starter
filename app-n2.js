@@ -37,7 +37,6 @@ function pintarInfo() {
   //Añadir lista a #info
   info.appendChild(ul);
 }
-
 /**
  * TODO 2: Gestión de tema
  * - leerTema(): devuelve 'light' o 'dark' (desde localStorage o por defecto 'light')
